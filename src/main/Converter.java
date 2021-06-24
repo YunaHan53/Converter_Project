@@ -5,15 +5,12 @@ import java.util.Scanner;
 
 public class Converter {
 	
-	public static int unit = 0;
-	static Scanner scanner = new Scanner(System.in);
-
+	// Scanner object
+	public static Scanner scanner = new Scanner(System.in);
+	public static double unit = 0;
 
 	public static void main(String[] args) {
 		
-		// Scanner object
-		Scanner scanner = new Scanner(System.in);
-
 		// Declare variable
 		int menuSelection = 0;
 				
@@ -52,24 +49,23 @@ public class Converter {
 	
 	public static void cmToInch() {
 		System.out.println("Input Centimeters to convert to Inches: ");
-		unit = scanner.nextInt();
+		unit = scanner.nextDouble();
 		System.out.println(unit + " cms = " + (unit * 0.393701) + " inches.");
 	}
 
 	public static void cToF() {
 		System.out.println("Input temperature in Celsius to convert to Fahrenheit: ");
-		unit = scanner.nextInt();
+		unit = scanner.nextDouble();
 		System.out.println(unit + " ˚C = " + ((unit * 9/5) +  32) + " ˚F");		
 	}
 
 	public static void kgToLb() {
 		System.out.println("Input Kilograms to convert to Pounds: ");
-		unit = scanner.nextInt();
+		unit = scanner.nextDouble();
 		System.out.println(unit + " kgs = " + (unit * 2.2) + " lbs.");
 	}
 
 	public static void quit() {
 		System.out.println("Thank you for using the unit converter!");
-		scanner.close();
 	}
 }
